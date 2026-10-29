@@ -1,0 +1,5941 @@
+/* =====================================
+   MATINYANS — OUR PHILOSOPHY
+   Quiet Luxury Design System
+===================================== */
+
+:root {
+  --ivory: #F4EDE3;
+  --nude: #D7C2AD;
+  --mocha: #9C7966;
+  --espresso: #292522;
+  --gold: #C0A16B;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-armenian: "Noto Sans Armenian", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--espresso);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =====================================
+   Philosophy Section
+===================================== */
+
+.philosophy {
+  padding: 110px 5% 130px;
+  overflow: hidden;
+}
+
+.philosophy__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.philosophy__header {
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+.philosophy__eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: var(--mocha);
+  margin-bottom: 22px;
+}
+
+.philosophy__header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 90px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.philosophy__header h1 em {
+  font-weight: 400;
+  color: var(--mocha);
+}
+
+.philosophy__divider {
+  width: 70px;
+  height: 1px;
+  background: var(--gold);
+  margin: 32px auto 0;
+}
+
+/* =====================================
+   Two Column Grid
+===================================== */
+
+.philosophy__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(55px, 7vw, 120px);
+}
+
+/* =====================================
+   Editorial Image
+===================================== */
+
+.philosophy__visual {
+  position: relative;
+}
+
+.philosophy__figure {
+  position: relative;
+}
+
+.philosophy__figure img {
+  width: 100%;
+  height: 690px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.8) contrast(0.95);
+  transition: transform 0.8s ease;
+}
+
+.philosophy__figure {
+  overflow: hidden;
+}
+
+.philosophy__figure:hover img {
+  transform: scale(1.035);
+}
+
+.philosophy__image-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 19px;
+
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--mocha);
+}
+
+.philosophy__image-caption span {
+  color: var(--espresso);
+}
+
+/* =====================================
+   Philosophy Content
+===================================== */
+
+.philosophy__content {
+  max-width: 570px;
+}
+
+.philosophy__intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 38px;
+}
+
+.philosophy__number {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: var(--mocha);
+}
+
+.philosophy__small-line {
+  height: 1px;
+  width: 55px;
+  background: var(--gold);
+}
+
+.philosophy__text {
+  font-family: var(--font-armenian);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.15;
+  color: #443A34;
+}
+
+.philosophy__text p {
+  margin-bottom: 25px;
+}
+
+.philosophy__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================
+   Brand Signature
+===================================== */
+
+.philosophy__signature {
+  margin-top: 54px;
+  text-align: center;
+}
+
+.philosophy__signature-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--nude),
+    transparent
+  );
+  margin-bottom: 40px;
+}
+
+.philosophy__brand {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4vw, 56px);
+  font-weight: 400;
+  letter-spacing: 7px;
+  line-height: 1.2;
+}
+
+.philosophy__tagline {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--mocha);
+}
+
+.philosophy__armenian-tagline {
+  margin-top: 13px;
+  font-family: var(--font-armenian);
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--espresso);
+}
+
+/* =====================================
+   Scroll Reveal
+===================================== */
+
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================
+   Tablet
+===================================== */
+
+@media (max-width: 1024px) {
+
+  .philosophy {
+    padding: 85px 5%;
+  }
+
+  .philosophy__grid {
+    gap: 45px;
+  }
+
+  .philosophy__figure img {
+    height: 580px;
+  }
+
+  .philosophy__text {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+}
+
+/* =====================================
+   Mobile
+===================================== */
+
+@media (max-width: 768px) {
+
+  .philosophy {
+    padding: 65px 22px 85px;
+  }
+
+  .philosophy__header {
+    margin-bottom: 48px;
+  }
+
+  .philosophy__header h1 {
+    font-size: clamp(42px, 10vw, 64px);
+    letter-spacing: -1px;
+  }
+
+  .philosophy__eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .philosophy__figure img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .philosophy__content {
+    max-width: 100%;
+  }
+
+  .philosophy__intro {
+    margin-bottom: 28px;
+  }
+
+  .philosophy__text {
+    font-size: 14px;
+    line-height: 2.05;
+  }
+
+  .philosophy__text p {
+    margin-bottom: 23px;
+  }
+
+  .philosophy__signature {
+    margin-top: 42px;
+  }
+
+  .philosophy__brand {
+    font-size: clamp(34px, 9vw, 48px);
+    letter-spacing: 4px;
+  }
+
+  .philosophy__tagline {
+    font-size: 18px;
+  }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+
+  .philosophy {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .philosophy__brand {
+    letter-spacing: 2px;
+  }
+
+  .philosophy__image-caption {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+}
+
+/* Accessibility: Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js-reveal .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .philosophy__figure img {
+    transition: none;
+  }
+
+  .philosophy__figure:hover img {
+    transform: none;
+  }
+
+}
+/* MATINYANS Founder Portrait */
+
+.philosophy__figure img {
+    width: 100%;
+    height: 690px;
+    object-fit: cover;
+    object-position: center 65%;
+    filter: none;
+}
+
+@media (max-width: 768px) {
+    .philosophy__figure img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: center 65%;
+    }
+}
+/* ==========================================
+   MATINYANS — MEET THE FOUNDER
+   Luxury Editorial Section
+   Scoped styles — independent component
+========================================== */
+
+.founder-section {
+  --founder-ivory: #F4EDE3;
+  --founder-nude: #D7C2AD;
+  --founder-mocha: #9C7966;
+  --founder-espresso: #292522;
+  --founder-gold: #C0A16B;
+
+  background: var(--founder-ivory);
+  color: var(--founder-espresso);
+  padding: 110px 5% 125px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.founder-section,
+.founder-section * {
+  box-sizing: border-box;
+}
+
+.founder-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* INTRODUCTION */
+
+.founder-header {
+  max-width: 850px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.founder-eyebrow,
+.founder-chapter {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  color: var(--founder-mocha);
+}
+
+.founder-header h2 {
+  margin: 22px 0 30px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.founder-header h2 em,
+.founder-chapter-heading h3 em,
+.founder-values-label h3 em {
+  color: var(--founder-mocha);
+  font-weight: 400;
+}
+
+.founder-divider {
+  width: 75px;
+  height: 1px;
+  margin: 0 auto 45px;
+  background: var(--founder-gold);
+}
+
+.founder-opening {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: clamp(21px, 2.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--founder-espresso);
+}
+
+/* EDITORIAL GRID */
+
+.founder-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(45px, 7vw, 110px);
+  align-items: center;
+}
+
+.founder-portrait {
+  margin: 0;
+  min-width: 0;
+}
+
+.founder-image-frame {
+  width: 100%;
+  overflow: hidden;
+  background: var(--founder-nude);
+}
+
+.founder-image-frame img {
+  display: block;
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+  object-position: center 65%;
+  filter: none;
+  transition: transform 1.2s ease;
+}
+
+.founder-image-frame:hover img {
+  transform: scale(1.035);
+}
+
+.founder-portrait figcaption {
+  margin-top: 19px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  color: var(--founder-mocha);
+}
+
+/* STORY TYPOGRAPHY */
+
+.founder-story {
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: 15px;
+  line-height: 2.15;
+  font-weight: 400;
+  color: var(--founder-espresso);
+}
+
+.founder-story p {
+  margin: 0 0 26px;
+}
+
+.founder-story p:last-child {
+  margin-bottom: 0;
+}
+
+.founder-story-intro .founder-chapter {
+  margin-bottom: 35px;
+}
+
+.founder-story .founder-lead {
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+/* THE JOURNEY */
+
+.founder-journey {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(25px, 3vw, 50px);
+  padding: 145px 0 120px;
+  align-items: start;
+}
+
+.founder-chapter-heading h3,
+.founder-values-label h3 {
+  margin: 22px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(37px, 4vw, 62px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.founder-journey-text {
+  max-width: 590px;
+}
+
+.founder-emphasis {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--founder-mocha);
+}
+
+/* BRAND VALUES */
+
+.founder-values {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: clamp(50px, 9vw, 150px);
+  padding: 95px 0 130px;
+  border-top: 1px solid var(--founder-nude);
+}
+
+.founder-small-divider {
+  width: 65px;
+  height: 1px;
+  margin-top: 35px;
+  background: var(--founder-gold);
+}
+
+/* PERSONAL QUOTE */
+
+.founder-quote-section {
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 100px 45px 110px;
+  text-align: center;
+  border-top: 1px solid var(--founder-nude);
+  border-bottom: 1px solid var(--founder-nude);
+}
+
+.founder-quote-decoration {
+  font-family: Georgia, serif;
+  font-size: 110px;
+  line-height: 0.9;
+  color: var(--founder-gold);
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+
+.founder-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.founder-quote p {
+  margin: 0;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: clamp(24px, 3.3vw, 43px);
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--founder-espresso);
+}
+
+.founder-quote-line {
+  width: 55px;
+  height: 1px;
+  background: var(--founder-gold);
+  margin: 45px auto 0;
+}
+
+/* FINAL THOUGHT */
+
+.founder-final {
+  max-width: 740px;
+  margin: 105px auto 0;
+  text-align: center;
+}
+
+.founder-final p {
+  margin: 0;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 2;
+}
+
+/* SIGNATURE */
+
+.founder-signature {
+  text-align: center;
+  padding-top: 90px;
+}
+
+.founder-signature-name {
+  margin: 0;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--founder-mocha);
+}
+
+.founder-signature-role {
+  margin: 13px 0 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.founder-signature-divider {
+  width: 1px;
+  height: 65px;
+  background: var(--founder-gold);
+  margin: 45px auto;
+}
+
+.founder-brand-name {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: 7px;
+  line-height: 1.3;
+}
+
+.founder-brand-slogan {
+  margin: 15px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--founder-mocha);
+}
+
+/* SCROLL REVEAL
+   Enabled only through JavaScript */
+
+.founder-animations-ready .founder-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.founder-animations-ready .founder-reveal.founder-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .founder-section {
+    padding: 85px 5% 100px;
+  }
+
+  .founder-editorial {
+    gap: 45px;
+  }
+
+  .founder-image-frame img {
+    height: 600px;
+  }
+
+  .founder-story {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .founder-journey,
+  .founder-values {
+    gap: 55px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .founder-section {
+    padding: 75px 22px 90px;
+  }
+
+  .founder-header {
+    margin-bottom: 60px;
+  }
+
+  .founder-header h2 {
+    font-size: clamp(42px, 10vw, 65px);
+    letter-spacing: -1px;
+  }
+
+  .founder-opening {
+    font-size: 21px;
+    line-height: 1.85;
+  }
+
+  .founder-editorial,
+  .founder-journey,
+  .founder-values {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-editorial {
+    gap: 55px;
+  }
+
+  .founder-image-frame img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 65%;
+  }
+
+  founder-story {
+
+    font-size: 15px;
+
+    line-height: 2.1;
+
+  }
+
+  .founder-journey {
+
+    padding: 95px 0 85px;
+
+    gap: 35px;
+
+  }
+
+  .founder-values {
+
+    padding: 80px 0 95px;
+
+    gap: 35px;
+
+  }
+
+  .founder-quote-section {
+
+    padding: 75px 5px 85px;
+
+  }
+
+  .founder-quote p {
+
+    font-size: clamp(23px, 5.5vw, 33px);
+
+  }
+
+  .founder-final {
+
+    margin-top: 75px;
+
+  }
+
+  .founder-signature {
+
+    padding-top: 70px;
+
+  }
+
+  .founder-brand-name {
+
+    font-size: 39px;
+
+    letter-spacing: 4px;
+
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+  .founder-section {
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+  }
+
+  .founder-eyebrow,
+
+  .founder-chapter {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+  }
+
+  .founder-brand-name {
+
+    font-size: 34px;
+
+    letter-spacing: 2px;
+
+  }
+
+  .founder-portrait figcaption {
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+  }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .founder-animations-ready .founder-reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+
+  }
+
+  .founder-image-frame img {
+
+    transition: none;
+
+  }
+
+  .founder-image-frame:hover img {
+
+    transform: none;
+
+  }
+
+}
+/* Founder portrait positioning */
+
+.founder-image-frame img {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+@media (max-width: 768px) {
+    .founder-image-frame img {
+        height: auto;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+/* =====================================
+   MATINYANS — OUR VALUES
+   Quiet Luxury Editorial Design
+===================================== */
+
+.values-section {
+  --values-ivory: var(--ivory, #F4EDE3);
+  --values-nude: var(--nude, #D7C2AD);
+  --values-mocha: var(--mocha, #9C7966);
+  --values-espresso: var(--espresso, #292522);
+  --values-gold: var(--gold, #C0A16B);
+
+  background: var(--values-ivory);
+  color: var(--values-espresso);
+  padding: 110px 5% 125px;
+  overflow: hidden;
+}
+
+.values-section,
+.values-section * {
+  box-sizing: border-box;
+}
+
+.values-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.values-header {
+  max-width: 850px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.values-eyebrow {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  color: var(--values-mocha);
+}
+
+.values-heading {
+  margin: 22px 0 30px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.values-heading em {
+  font-weight: 400;
+  color: var(--values-mocha);
+}
+
+.values-divider {
+  width: 75px;
+  height: 1px;
+  margin: 0 auto 40px;
+  background: var(--values-gold);
+}
+
+.values-introduction {
+  max-width: 730px;
+  margin: 0 auto;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.1;
+  color: var(--values-espresso);
+}
+
+/* FOUR COLUMN GRID */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--values-nude);
+  border-bottom: 1px solid var(--values-nude);
+}
+
+.values-item {
+  position: relative;
+  min-width: 0;
+  padding: 48px 28px 58px;
+  text-align: left;
+  transition: background-color 0.35s ease;
+}
+
+.values-item:not(:last-child) {
+  border-right: 1px solid var(--values-nude);
+}
+
+.values-item:hover {
+  background: rgba(215, 194, 173, 0.12);
+}
+
+.values-number {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  color: var(--values-mocha);
+}
+
+.values-accent {
+  width: 35px;
+  height: 1px;
+  margin: 30px 0 35px;
+  background: var(--values-gold);
+  transition: width 0.4s ease;
+}
+
+.values-item:hover .values-accent {
+  width: 60px;
+}
+
+.values-item-title {
+  margin: 0 0 22px;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--values-espresso);
+  overflow-wrap: break-word;
+}
+
+.values-description {
+  margin: 0;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #51443D;
+}
+
+/* CLOSING */
+
+.values-footer {
+  max-width: 850px;
+  margin: 105px auto 0;
+  text-align: center;
+}
+
+.values-footer-line {
+  width: 1px;
+  height: 60px;
+  background: var(--values-gold);
+  margin: 0 auto 42px;
+}
+
+.values-closing {
+  margin: 0;
+  font-family: "Noto Sans Armenian", sans-serif;
+  font-size: clamp(20px, 2.5vw, 30px);
+  line-height: 1.9;
+}
+
+.values-signature {
+  margin-top: 65px;
+}
+
+.values-brand {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.values-slogan {
+  margin: 12px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--values-mocha);
+}
+
+/* SCROLL ANIMATION */
+
+.values-section.values-animations-ready
+.values-item {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    background-color 0.35s ease;
+}
+
+.values-section.values-animations-ready
+.values-item.values-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .values-section {
+    padding: 85px 5% 100px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .values-item:nth-child(-n+2) {
+    border-bottom: 1px solid var(--values-nude);
+  }
+
+  .values-item {
+    padding: 42px 35px 50px;
+  }
+
+  .values-item-title {
+    font-size: 21px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .values-section {
+    padding: 75px 22px 90px;
+  }
+
+  .values-header {
+    margin-bottom: 65px;
+  }
+
+  .values-heading {
+    font-size: clamp(45px, 11vw, 64px);
+    letter-spacing: -1px;
+  }
+
+  .values-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .values-introduction {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-item {
+    padding: 38px 10px 45px;
+    border-right: none !important;
+  }
+
+  .values-item:not(:last-child) {
+    border-bottom: 1px solid var(--values-nude);
+  }
+
+  .values-item-title {
+    font-size: 21px;
+  }
+
+  .values-accent {
+    margin: 22px 0 26px;
+  }
+
+  .values-footer {
+    margin-top: 75px;
+  }
+
+  .values-closing {
+    font-size: 21px;
+  }
+
+  .values-brand {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .values-section.values-animations-ready
+  .values-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .values-item,
+  .values-accent {
+    transition: none;
+  }
+}
+/* MATINYANS — Approved Our Philosophy Design */
+
+.philosophy {
+  background: #F4EDE3;
+  padding: 80px 5% 95px;
+}
+
+.philosophy__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.philosophy__header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.philosophy__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.philosophy__figure img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.philosophy__text {
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.philosophy__text p {
+  margin-bottom: 20px;
+}
+
+.philosophy__signature {
+  margin-top: 35px;
+}
+
+/* Tablet */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .philosophy__grid {
+    gap: 35px;
+  }
+
+  .philosophy__figure img {
+    height: 500px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .philosophy {
+    padding: 65px 22px 80px;
+  }
+
+  .philosophy__header {
+    margin-bottom: 45px;
+  }
+
+  .philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .philosophy__figure img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .philosophy__text {
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+/* MATINYANS — APPROVED MEET THE FOUNDER */
+
+.founder-section {
+  background: #E9D9CA;
+  padding: 85px 5% 100px;
+}
+
+.founder-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.founder-header {
+  margin-bottom: 60px;
+}
+
+.founder-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(35px, 5vw, 75px);
+  align-items: center;
+}
+
+.founder-image-frame img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.founder-story {
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.founder-story p {
+  margin-bottom: 20px;
+}
+
+.founder-journey {
+  padding: 80px 0 70px;
+}
+
+.founder-values {
+  padding: 80px 0 85px;
+}
+
+.founder-quote-section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+/* Tablet */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .founder-editorial {
+    gap: 35px;
+  }
+
+  .founder-image-frame img {
+    height: 500px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .founder-section {
+    padding: 65px 22px 80px;
+  }
+
+  .founder-header {
+    margin-bottom: 45px;
+  }
+
+  .founder-editorial {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .founder-image-frame img {
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+
+  .founder-story {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .founder-journey {
+    padding: 65px 0;
+  }
+
+  .founder-values {
+    padding: 65px 0;
+  }
+}
+/* MATINYANS — APPROVED OUR VALUES */
+
+.values-section {
+  background: #F4EDE3;
+  padding: 85px 5% 100px;
+}
+
+.values-header {
+  margin-bottom: 55px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  border: none;
+}
+
+.values-item {
+  border: 1px solid #D7C2AD;
+  padding: 35px 20px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.values-item:not(:last-child) {
+  border-right: 1px solid #D7C2AD;
+}
+
+.values-accent {
+  display: none;
+}
+
+.values-item-title {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.values-description {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.values-footer {
+  margin-top: 65px;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .values-section {
+    padding: 65px 22px 80px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .values-item {
+    padding: 30px 20px;
+    border: 1px solid #D7C2AD !important;
+  }
+}
+/* MATINYANS — Luxury Values Icons */
+
+.values-icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 22px;
+  color: #B58A55;
+}
+
+.values-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.values-item-title,
+.values-description {
+  text-align: center;
+}
+/* MATINYANS — Our Values Final Refinement */
+
+.values-section {
+  background-color: #F4EDE3;
+}
+
+.values-grid {
+  align-items: stretch;
+  gap: 16px;
+}
+
+.values-item {
+  min-height: 205px;
+  padding: 28px 18px 30px;
+  justify-content: flex-start;
+}
+
+.values-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 18px;
+}
+
+.values-item-title {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.values-description {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.values-footer {
+  margin-top: 55px;
+}
+
+.values-brand {
+  font-size: clamp(30px, 3vw, 42px);
+  letter-spacing: 6px;
+}
+
+.values-slogan {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .values-item {
+    min-height: auto;
+    padding: 28px 20px;
+  }
+
+  .values-brand {
+    letter-spacing: 3px;
+  }
+}
+/* MATINYANS — Our Values Background & Spacing Fix */
+
+
+/* =========================================
+   MATINYANS — BOTANICAL CORNER DECORATION
+   Our Values — Decorative refinement
+   ========================================= */
+
+#our-values {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Delicate golden botanical ornaments */
+
+#our-values::before,
+#our-values::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: clamp(90px, 17vw, 220px);
+  height: clamp(110px, 19vw, 240px);
+  background-image: url("botanical.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Left ornament */
+#our-values::before {
+  left: 0;
+}
+
+/* Right ornament */
+#our-values::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #our-values::before,
+  #our-values::after {
+    width: 105px;
+    height: 145px;
+    opacity: 0.24;
+  }
+}
+
+/* =========================================
+   MATINYANS — BOTANICAL CORNER DECORATION
+   Our Values — Decorative refinement
+   ========================================= */
+
+#our-values {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Delicate golden botanical ornaments */
+
+#our-values::before,
+#our-values::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: clamp(90px, 17vw, 220px);
+  height: clamp(110px, 19vw, 240px);
+  background-image: url("botanical.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Left ornament */
+#our-values::before {
+  left: 0;
+}
+
+/* Right ornament */
+#our-values::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #our-values::before,
+  #our-values::after {
+    width: 105px;
+    height: 145px;
+    opacity: 0.24;
+  }
+}
+
+/* =========================================
+   MATINYANS — BOTANICAL CORNER DECORATION
+   Our Values — Decorative refinement
+   ========================================= */
+
+#our-values {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Delicate golden botanical ornaments */
+
+#our-values::before,
+#our-values::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: clamp(90px, 17vw, 220px);
+  height: clamp(110px, 19vw, 240px);
+  background-image: url("botanical.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Left ornament */
+#our-values::before {
+  left: 0;
+}
+
+/* Right ornament */
+#our-values::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #our-values::before,
+  #our-values::after {
+    width: 105px;
+    height: 145px;
+    opacity: 0.24;
+  }
+}
+
+/* ==========================================
+   MATINYANS — LUXURY EDITORIAL HERO
+   ========================================== */
+
+.matinyans-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  min-height: min(800px, 90svh);
+  background: #181514;
+  color: #F4EDE3;
+  overflow: hidden;
+}
+
+.matinyans-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(50px, 7vw, 110px);
+}
+
+.matinyans-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  color: #D7C2AD;
+}
+
+.matinyans-hero__title {
+  margin: 28px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(43px, 5.2vw, 86px);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}
+
+.matinyans-hero__tagline {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2vw, 30px);
+  font-style: italic;
+  color: #C0A16B;
+}
+
+.matinyans-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 48px;
+}
+
+.matinyans-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 22px;
+  border: 1px solid #D7C2AD;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.matinyans-hero__button--primary {
+  background: #F4EDE3;
+  color: #292522;
+}
+
+.matinyans-hero__button--secondary {
+  background: transparent;
+  color: #F4EDE3;
+}
+
+.matinyans-hero__button--primary:hover {
+  background: #D7C2AD;
+}
+
+.matinyans-hero__button--secondary:hover {
+  background: #F4EDE3;
+  color: #292522;
+}
+
+.matinyans-hero__button:focus-visible {
+  outline: 2px solid #C0A16B;
+  outline-offset: 4px;
+}
+
+.matinyans-hero__visual {
+  position: relative;
+  min-width: 0;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.matinyans-hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(24, 21, 20, 0.25),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+.matinyans-hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+}
+
+.matinyans-hero__index {
+  position: absolute;
+  bottom: 24px;
+  left: clamp(24px, 7vw, 110px);
+  z-index: 3;
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #D7C2AD;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .matinyans-hero {
+    grid-template-columns: 1fr 1fr;
+    min-height: 680px;
+  }
+
+  .matinyans-hero__content {
+    padding: 48px 35px;
+  }
+
+  .matinyans-hero__title {
+    font-size: clamp(38px, 5vw, 62px);
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .matinyans-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: auto;
+  }
+
+  .matinyans-hero__visual {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .matinyans-hero__image {
+    object-position: center 38%;
+  }
+
+  .matinyans-hero__visual::after {
+    background: linear-gradient(
+      0deg,
+      rgba(24, 21, 20, 0.18),
+      transparent 50%
+    );
+  }
+
+  .matinyans-hero__content {
+    padding: 42px 22px 72px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .matinyans-hero__eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .matinyans-hero__title {
+    margin-top: 18px;
+    font-size: clamp(36px, 9vw, 55px);
+    letter-spacing: 0.035em;
+  }
+
+  .matinyans-hero__tagline {
+    margin-top: 12px;
+    font-size: 22px;
+  }
+
+  .matinyans-hero__actions {
+    width: 100%;
+    margin-top: 32px;
+    flex-direction: column;
+  }
+
+  .matinyans-hero__button {
+    width: 100%;
+  }
+
+  .matinyans-hero__index {
+    left: 22px;
+    bottom: 18px;
+    font-size: 8px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .matinyans-hero__button {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   MATINYANS — FEATURED COLLECTION
+   Quiet Luxury Editorial Section
+   ========================================== */
+
+.matinyans-featured {
+  background: #F4EDE3;
+  color: #292522;
+  padding: clamp(75px, 9vw, 140px) 5%;
+  scroll-margin-top: 80px;
+}
+
+.matinyans-featured__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(45px, 8vw, 125px);
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.matinyans-featured__visual,
+.matinyans-featured__content {
+  min-width: 0;
+}
+
+.matinyans-featured__figure {
+  margin: 0;
+  overflow: hidden;
+  background: #292522;
+}
+
+.matinyans-featured__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+.matinyans-featured__figure:hover img {
+  transform: scale(1.025);
+}
+
+.matinyans-featured__image-caption {
+  display: block;
+  margin-top: 18px;
+  color: #9C7966;
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  line-height: 1.7;
+}
+
+.matinyans-featured__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.matinyans-featured__eyebrow {
+  color: #9C7966;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+.matinyans-featured__title {
+  margin: 25px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(43px, 5vw, 78px);
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -1.5px;
+}
+
+.matinyans-featured__title em {
+  display: block;
+  color: #9C7966;
+  font-weight: 400;
+}
+
+.matinyans-featured__divider {
+  width: 75px;
+  height: 1px;
+  margin: 35px 0;
+  background: #C0A16B;
+}
+
+.matinyans-featured__description {
+  max-width: 490px;
+  color: #51443D;
+  font-family: var(--font-armenian);
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 2;
+}
+
+.matinyans-featured__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  min-height: 50px;
+  margin-top: 42px;
+  padding: 14px 24px;
+  border: 1px solid #292522;
+  color: #292522;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.matinyans-featured__button:hover {
+  background: #292522;
+  color: #F4EDE3;
+}
+
+.matinyans-featured__button:focus-visible {
+  outline: 2px solid #9C7966;
+  outline-offset: 4px;
+}
+
+.matinyans-featured__edition {
+  display: block;
+  margin-top: 65px;
+  color: #9C7966;
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .matinyans-featured__container {
+    gap: 45px;
+  }
+
+  .matinyans-featured__title {
+    font-size: clamp(38px, 5vw, 60px);
+  }
+
+  .matinyans-featured__edition {
+    margin-top: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .matinyans-featured {
+    padding: 75px 22px 85px;
+  }
+
+  .matinyans-featured__container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .matinyans-featured__figure img {
+    aspect-ratio: 3 / 2;
+  }
+
+  .matinyans-featured__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .matinyans-featured__eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .matinyans-featured__title {
+    margin-top: 18px;
+    font-size: clamp(43px, 10vw, 60px);
+  }
+
+  .matinyans-featured__divider {
+    margin: 28px auto;
+  }
+
+  .matinyans-featured__description {
+    font-size: 15px;
+    line-height: 1.95;
+  }
+
+  .matinyans-featured__button {
+    margin-top: 32px;
+  }
+
+  .matinyans-featured__edition {
+    margin-top: 45px;
+    font-size: 8px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .matinyans-featured__figure img,
+  .matinyans-featured__button {
+    transition: none;
+  }
+
+  .matinyans-featured__figure:hover img {
+    transform: none;
+  }
+}
+
+/* ==========================================
+   MATINYANS — SHOP THE LOOK
+   ========================================== */
+
+.matinyans-shop-look {
+  padding: clamp(75px, 9vw, 135px) 5%;
+  background: #E9D9CA;
+  color: #292522;
+  scroll-margin-top: 80px;
+}
+
+.matinyans-shop-look__header {
+  max-width: 750px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.matinyans-shop-look__eyebrow {
+  color: #9C7966;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.matinyans-shop-look__header h2 {
+  margin: 20px 0 15px;
+  font-family: var(--font-display);
+  font-size: clamp(43px, 5vw, 75px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.matinyans-shop-look__header h2 em {
+  color: #9C7966;
+  font-weight: 400;
+}
+
+.matinyans-shop-look__header p {
+  color: #754A3B;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2vw, 27px);
+  font-style: italic;
+}
+
+.matinyans-shop-look__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.matinyans-product-card {
+  min-width: 0;
+}
+
+.matinyans-product-card__image {
+  overflow: hidden;
+  background: #292522;
+  aspect-ratio: 3 / 4;
+}
+
+.matinyans-product-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.65s ease;
+}
+
+.matinyans-product-card:hover img {
+  transform: scale(1.035);
+}
+
+.matinyans-product-card__info {
+  padding: 22px 2px 0;
+}
+
+.matinyans-product-card__number {
+  color: #9C7966;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.matinyans-product-card__info h3 {
+  margin: 12px 0 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.matinyans-product-card__price {
+  margin-bottom: 22px;
+  color: #51443D;
+  font-size: 15px;
+}
+
+.matinyans-product-card__details,
+.matinyans-product-card__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 8px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.matinyans-product-card__details {
+  margin-bottom: 9px;
+  border: 1px solid #9C7966;
+  background: transparent;
+  color: #292522;
+}
+
+.matinyans-product-card__add {
+  border: 1px solid #292522;
+  background: #292522;
+  color: #F4EDE3;
+}
+
+.matinyans-product-card__details:hover {
+  background: #F4EDE3;
+}
+
+.matinyans-product-card__add:hover {
+  background: #754A3B;
+}
+
+.matinyans-product-card__details:focus-visible,
+.matinyans-product-card__add:focus-visible {
+  outline: 2px solid #754A3B;
+  outline-offset: 3px;
+}
+
+.matinyans-shop-look__footer {
+  margin: 75px auto 0;
+  text-align: center;
+  color: #9C7966;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .matinyans-shop-look__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .matinyans-shop-look {
+    padding: 75px 20px;
+  }
+
+  .matinyans-shop-look__header {
+    margin-bottom: 42px;
+  }
+
+  .matinyans-shop-look__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .matinyans-product-card__image {
+    aspect-ratio: 3 / 4;
+  }
+
+  .matinyans-product-card__info h3 {
+    font-size: 18px;
+  }
+
+  .matinyans-shop-look__footer {
+    margin-top: 55px;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matinyans-product-card__image img,
+  .matinyans-product-card__details,
+  .matinyans-product-card__add {
+    transition: none;
+  }
+
+  .matinyans-product-card:hover img {
+    transform: none;
+  }
+}
+
+/* MATINYANS — Boots Image Refinement */
+
+.matinyans-product-card:has([src="boots.jpg"])
+.matinyans-product-card__image img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.matinyans-product-card:has([src="boots.jpg"])
+.matinyans-product-card__image {
+  background: #292522;
+}
+
+/* ==========================================
+   MATINYANS — COMPLETE COLLECTION
+   ========================================== */
+
+.matinyans-collection {
+  padding: clamp(75px, 8vw, 130px) 5%;
+  background: #F4EDE3;
+  color: #292522;
+}
+
+.matinyans-collection__heading {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.matinyans-collection__eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #9C7966;
+}
+
+.matinyans-collection__heading h2 {
+  margin: 20px 0;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.matinyans-collection__heading h2 em {
+  color: #9C7966;
+  font-weight: 400;
+}
+
+.matinyans-collection__heading p {
+  color: #754A3B;
+  font-size: clamp(13px, 1.3vw, 17px);
+  line-height: 1.8;
+}
+
+.matinyans-collection__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-bottom: 28px;
+}
+
+.matinyans-collection__filters button {
+  min-height: 44px;
+  padding: 10px 3px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: #51443D;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+}
+
+.matinyans-collection__filters button[aria-pressed="true"] {
+  border-bottom-color: #754A3B;
+  color: #292522;
+}
+
+.matinyans-collection__count {
+  max-width: 1400px;
+  margin: 0 auto 24px;
+  color: #9C7966;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.matinyans-collection__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.matinyans-collection__card {
+  min-width: 0;
+}
+
+.matinyans-collection__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #E9D9CA;
+}
+
+.matinyans-collection__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.matinyans-collection__card:hover img {
+  transform: scale(1.025);
+}
+
+.matinyans-collection__placeholder {
+  padding: 20px;
+  color: #9C7966;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.matinyans-collection__info {
+  padding-top: 18px;
+}
+
+.matinyans-collection__info h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.matinyans-collection__info p {
+  margin: 0 0 18px;
+  color: #51443D;
+  font-size: 14px;
+}
+
+.matinyans-collection__quick,
+.matinyans-collection__add {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 10px 8px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.matinyans-collection__quick {
+  border: 1px solid #9C7966;
+  background: transparent;
+  color: #292522;
+}
+
+.matinyans-collection__add {
+  border: 1px solid #292522;
+  background: #292522;
+  color: #F4EDE3;
+}
+
+.matinyans-collection__add:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.matinyans-collection__filters button:focus-visible,
+.matinyans-collection__quick:focus-visible {
+  outline: 2px solid #754A3B;
+  outline-offset: 3px;
+}
+
+.matinyans-collection__closing {
+  margin: 75px 0 0;
+  text-align: center;
+  color: #9C7966;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1024px) {
+  .matinyans-collection__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .matinyans-collection {
+    padding: 70px 18px;
+  }
+
+  .matinyans-collection__grid {
+    gap: 32px 12px;
+  }
+
+  .matinyans-collection__info h3 {
+    font-size: 13px;
+  }
+
+  .matinyans-collection__info p {
+    font-size: 13px;
+  }
+
+  .matinyans-collection__quick,
+  .matinyans-collection__add {
+    font-size: 9px;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .matinyans-collection__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matinyans-collection__image img {
+    transition: none;
+  }
+
+  .matinyans-collection__card:hover img {
+    transform: none;
+  }
+}
+
+/* MATINYANS EDITORIAL LOOKBOOK */
+
+.matinyans-lookbook {
+  padding: 100px 6%;
+  background: #f7f4ef;
+}
+
+.matinyans-lookbook__intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.matinyans-lookbook__intro span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #8d7569;
+}
+
+.matinyans-lookbook__intro h2 {
+  margin: 18px 0;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.matinyans-lookbook__intro h2 em {
+  font-weight: 400;
+}
+
+.matinyans-lookbook__intro p {
+  color: #81766f;
+  font-size: 14px;
+}
+
+.matinyans-lookbook__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.matinyans-lookbook__item {
+  margin: 0;
+  min-width: 0;
+}
+
+.matinyans-lookbook__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.matinyans-lookbook__item img:hover {
+  transform: scale(1.025);
+}
+
+.matinyans-lookbook__item figcaption {
+  padding-top: 18px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #655951;
+}
+
+@media (max-width: 768px) {
+  .matinyans-lookbook {
+    padding: 65px 5%;
+  }
+
+  .matinyans-lookbook__grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+/* Show the complete third lookbook image */
+.matinyans-lookbook__item:nth-child(3) img {
+  object-fit: contain;
+  object-position: center top;
+}
+
+/* MATINYANS LOOKBOOK — FINAL LAYOUT */
+
+/* First two images side by side */
+.matinyans-lookbook__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* Third image below, full width */
+.matinyans-lookbook__item:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+/* Show complete collection without cropping */
+.matinyans-lookbook__item:nth-child(3) img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .matinyans-lookbook__grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .matinyans-lookbook__item:nth-child(3) {
+    grid-column: auto;
+  }
+}
+
+/* MATINYANS — THE NAVY & IVORY EDIT */
+
+.navy-edit {
+  background: #F4EDE3;
+  color: #292522;
+  padding: 100px 0;
+}
+
+.navy-edit * {
+  box-sizing: border-box;
+}
+
+.navy-edit__container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+.navy-edit__intro,
+.navy-edit__section-heading,
+.navy-edit__story {
+  text-align: center;
+}
+
+.navy-edit__eyebrow,
+.navy-edit__section-heading > span,
+.navy-edit__story > span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9C7966;
+}
+
+.navy-edit h2,
+.navy-edit h3,
+.navy-edit h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+.navy-edit h2 {
+  font-size: clamp(38px, 5vw, 70px);
+  margin: 20px 0;
+}
+
+.navy-edit h3 {
+  font-size: clamp(30px, 4vw, 48px);
+  margin: 15px 0;
+}
+
+.navy-edit em {
+  color: #754A3B;
+  font-weight: 400;
+}
+
+.navy-edit__tagline {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #754A3B;
+}
+
+.navy-edit__description {
+  max-width: 680px;
+  margin: 25px auto 60px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #51443D;
+}
+
+.navy-edit__editorial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.navy-edit figure {
+  margin: 0;
+}
+
+.navy-edit__editorial img,
+.navy-edit__looks img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.navy-edit figcaption {
+  padding: 15px 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #75665D;
+}
+
+.navy-edit__section-heading {
+  margin: 90px auto 40px;
+}
+
+.navy-edit__section-heading p {
+  font-size: 14px;
+  color: #75665D;
+}
+
+.navy-edit__products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 35px 20px;
+}
+
+.navy-edit__product {
+  min-width: 0;
+  text-align: center;
+}
+
+.navy-edit__product img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  background: #E6D8C8;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.navy-edit__product:hover img {
+  transform: scale(1.025);
+}
+
+.navy-edit__product h4 {
+  font-size: 19px;
+  margin: 18px 0 8px;
+}
+
+.navy-edit__product p {
+  font-size: 14px;
+  color: #76584C;
+}
+
+.navy-edit__product button {
+  margin-top: 12px;
+  padding: 13px 20px;
+  width: 100%;
+  border: 1px solid #9C7966;
+  background: transparent;
+  color: #292522;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navy-edit__product button:hover {
+  background: #292522;
+  color: #F4EDE3;
+}
+
+.navy-edit__looks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.navy-edit__story {
+  max-width: 760px;
+  margin: 100px auto 0;
+  padding-top: 55px;
+  border-top: 1px solid #D7C2AD;
+}
+
+.navy-edit__story p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #51443D;
+}
+
+.navy-edit__signature {
+  margin-top: 30px;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  color: #754A3B !important;
+}
+
+@media (max-width: 900px) {
+  .navy-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .navy-edit {
+    padding: 65px 0;
+  }
+
+  .navy-edit__editorial,
+  .navy-edit__looks {
+    grid-template-columns: 1fr;
+  }
+
+  .navy-edit__products {
+    gap: 25px 12px;
+  }
+
+  .navy-edit__product h4 {
+    font-size: 16px;
+  }
+
+  .navy-edit__product button {
+    padding: 12px 6px;
+    font-size: 10px;
+  }
+
+  .navy-edit__section-heading {
+    margin: 65px auto 30px;
+  }
+
+  .navy-edit__story {
+    margin-top: 70px;
+  }
+}
+
+
+/* ==========================================
+   MATINYANS — THE ROUGE & NOIR EDIT
+   New collection — isolated styling
+========================================== */
+
+.rouge-noir-edit {
+  background: #F4EDE3;
+  color: #292522;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.rouge-noir-edit,
+.rouge-noir-edit * {
+  box-sizing: border-box;
+}
+
+.rouge-noir-edit__container {
+  width: min(1240px, 90%);
+  margin: 0 auto;
+}
+
+/* INTRODUCTION */
+
+.rouge-noir-edit__intro {
+  max-width: 790px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.rouge-noir-edit__eyebrow,
+.rouge-noir-edit__section-heading span,
+.rouge-noir-edit__story > span {
+  display: block;
+  color: #A70E20;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  line-height: 1.5;
+}
+
+.rouge-noir-edit h2,
+.rouge-noir-edit h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.rouge-noir-edit h2 {
+  font-size: clamp(38px, 5.4vw, 70px);
+  margin: 20px 0 14px;
+}
+
+.rouge-noir-edit h3 {
+  font-size: clamp(30px, 4vw, 49px);
+  margin: 15px 0;
+}
+
+.rouge-noir-edit h2 em,
+.rouge-noir-edit h3 em {
+  color: #A70E20;
+  font-weight: 400;
+}
+
+.rouge-noir-edit__tagline {
+  color: #760C19;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+.rouge-noir-edit__description,
+.rouge-noir-edit__story p {
+  color: #51443D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* EDITORIAL LOOKBOOK */
+
+.rouge-noir-edit__editorial {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 95px;
+}
+
+.rouge-noir-edit figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.rouge-noir-edit__editorial img {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.rouge-noir-edit__editorial figure:hover img {
+  transform: scale(1.025);
+}
+
+.rouge-noir-edit figcaption {
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  line-height: 1.5;
+}
+
+/* SECTION HEADINGS */
+
+.rouge-noir-edit__section-heading {
+  margin: 60px auto 42px;
+  text-align: center;
+}
+
+.rouge-noir-edit__section-heading p {
+  color: #76665B;
+  font-size: 14px;
+}
+
+/* PRODUCT GRID */
+
+.rouge-noir-edit__products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px 22px;
+}
+
+.rouge-noir-edit__product {
+  min-width: 0;
+  text-align: center;
+}
+
+.rouge-noir-edit__product img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #E9E0D6;
+  transition: transform 0.45s ease;
+}
+
+.rouge-noir-edit__product img:hover {
+  transform: scale(1.025);
+}
+
+.rouge-noir-edit__product h4 {
+  margin: 16px 0 8px;
+  color: #292522;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.rouge-noir-edit__product p {
+  margin: 0 0 14px;
+  color: #760C19;
+  font-size: 13px;
+}
+
+.rouge-noir-edit__product button {
+  padding: 13px 20px;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.rouge-noir-edit__product button:hover {
+  background: #A70E20;
+  border-color: #A70E20;
+}
+
+.rouge-noir-edit__product button:focus-visible {
+  outline: 2px solid #A70E20;
+  outline-offset: 3px;
+}
+
+/* SHOP THE LOOK */
+
+.rouge-noir-edit__looks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rouge-noir-edit__looks img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.rouge-noir-edit__looks figure:hover img {
+  transform: scale(1.025);
+}
+
+/* COLLECTION STORY */
+
+.rouge-noir-edit__story {
+  max-width: 750px;
+  margin: 95px auto 0;
+  text-align: center;
+}
+
+.rouge-noir-edit__signature {
+  color: #760C19 !important;
+  font-family: Georgia, serif;
+  font-size: 18px !important;
+  font-style: italic;
+  margin-top: 25px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .rouge-noir-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rouge-noir-edit__editorial img {
+    height: 440px;
+  }
+
+  .rouge-noir-edit__looks img {
+    height: 310px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .rouge-noir-edit {
+    padding: 65px 0;
+  }
+
+  .rouge-noir-edit__intro {
+    margin-bottom: 42px;
+  }
+
+  .rouge-noir-edit__editorial,
+  .rouge-noir-edit__looks {
+    grid-template-columns: 1fr;
+  }
+
+  .rouge-noir-edit__editorial img {
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+  }
+
+  .rouge-noir-edit__looks img {
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+  }
+
+  .rouge-noir-edit__products {
+    gap: 26px 12px;
+  }
+
+  .rouge-noir-edit__product h4 {
+    font-size: 15px;
+  }
+
+  .rouge-noir-edit__product button {
+    padding: 12px 9px;
+    font-size: 10px;
+  }
+
+  .rouge-noir-edit__story {
+    margin-top: 65px;
+  }
+}
+
+/* ============================================
+   MATINYANS — THE HERITAGE DENIM EDIT
+   Independent Collection Styling
+============================================ */
+
+.heritage-denim-edit {
+  background: #F4EDE3;
+  color: #292522;
+  padding: 110px 0;
+  overflow: hidden;
+}
+
+.heritage-denim-edit,
+.heritage-denim-edit * {
+  box-sizing: border-box;
+}
+
+.heritage-denim-edit__container {
+  width: min(1240px, 90%);
+  margin: 0 auto;
+}
+
+/* INTRODUCTION */
+
+.heritage-denim-edit__intro {
+  max-width: 790px;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.heritage-denim-edit__eyebrow {
+  display: block;
+  color: #624332;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  line-height: 1.6;
+}
+
+.heritage-denim-edit h2,
+.heritage-denim-edit h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.heritage-denim-edit h2 {
+  margin: 20px 0 16px;
+  font-size: clamp(38px, 5.3vw, 68px);
+}
+
+.heritage-denim-edit h3 {
+  margin: 18px 0 24px;
+  font-size: clamp(30px, 3.8vw, 49px);
+}
+
+.heritage-denim-edit h2 em,
+.heritage-denim-edit h3 em {
+  color: #624332;
+  font-weight: 400;
+}
+
+.heritage-denim-edit__tagline {
+  margin: 16px 0;
+  color: #624332;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.heritage-denim-edit__description {
+  color: #51443D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* MAIN EDITORIAL */
+
+.heritage-denim-edit__hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(30px, 6vw, 90px);
+  margin-bottom: 115px;
+}
+
+.heritage-denim-edit__hero-image {
+  overflow: hidden;
+  background: #E4D7C7;
+}
+
+.heritage-denim-edit__hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.heritage-denim-edit__hero-image:hover img {
+  transform: scale(1.025);
+}
+
+.heritage-denim-edit__hero-content {
+  padding: 20px 0;
+}
+
+.heritage-denim-edit__hero-content p,
+.heritage-denim-edit__complete-content p,
+.heritage-denim-edit__story p {
+  color: #51443D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.heritage-denim-edit__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #624332;
+  color: #34241E;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.heritage-denim-edit__link:hover {
+  color: #667E95;
+}
+
+.heritage-denim-edit__link span {
+  font-size: 19px;
+  transition: transform 0.25s ease;
+}
+
+.heritage-denim-edit__link:hover span {
+  transform: translateX(5px);
+}
+
+/* SECTION HEADING */
+
+.heritage-denim-edit__section-heading {
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.heritage-denim-edit__section-heading p {
+  color: #76665B;
+  font-size: 14px;
+}
+
+/* PRODUCT GRID */
+
+.heritage-denim-edit__products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  scroll-margin-top: 100px;
+}
+
+.heritage-denim-edit__product {
+  min-width: 0;
+  text-align: center;
+}
+
+.heritage-denim-edit__product-image {
+  overflow: hidden;
+  background: #E4D7C7;
+}
+
+.heritage-denim-edit__product-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.heritage-denim-edit__product:hover img {
+  transform: scale(1.035);
+}
+
+.heritage-denim-edit__product h4 {
+  margin: 19px 0 8px;
+  color: #292522;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.heritage-denim-edit__price {
+  margin: 0 0 17px;
+  color: #624332;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.heritage-denim-edit__product button {
+  padding: 13px 22px;
+  border: 1px solid #34241E;
+  background: #34241E;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.heritage-denim-edit__product button:hover {
+  background: #624332;
+  border-color: #624332;
+}
+
+.heritage-denim-edit__product button:focus-visible {
+  outline: 2px solid #667E95;
+  outline-offset: 3px;
+}
+
+/* COMPLETE LOOK */
+
+.heritage-denim-edit__complete {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(30px, 6vw, 90px);
+  margin-top: 125px;
+  padding: 45px;
+  background: #E4D7C7;
+}
+
+.heritage-denim-edit__complete-image {
+  overflow: hidden;
+}
+
+.heritage-denim-edit__complete-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.heritage-denim-edit__complete-image:hover img {
+  transform: scale(1.025);
+}
+
+.heritage-denim-edit__pricing {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 25px 0 10px;
+}
+
+.heritage-denim-edit__old-price {
+  color: #76665B;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.heritage-denim-edit__pricing strong {
+  color: #34241E;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.heritage-denim-edit__offer-note {
+  font-size: 12px !important;
+}
+
+/* COLLECTION STORY */
+
+.heritage-denim-edit__story {
+  max-width: 780px;
+  margin: 115px auto 0;
+  text-align: center;
+}
+
+.heritage-denim-edit__signature {
+  margin-top: 28px;
+  color: #624332 !important;
+  font-family: Georgia, serif;
+  font-size: 18px !important;
+  font-style: italic;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .heritage-denim-edit {
+    padding: 85px 0;
+  }
+
+  .heritage-denim-edit__hero {
+    gap: 35px;
+  }
+
+  .heritage-denim-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .heritage-denim-edit__complete {
+    gap: 35px;
+    padding: 30px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .heritage-denim-edit {
+    padding: 65px 0;
+  }
+
+  .heritage-denim-edit__intro {
+    margin-bottom: 45px;
+  }
+
+  .heritage-denim-edit__hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 75px;
+  }
+
+  .heritage-denim-edit__hero-content {
+    padding: 0;
+  }
+
+  .heritage-denim-edit__section-heading {
+    margin-bottom: 32px;
+  }
+
+  .heritage-denim-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
+  }
+
+  .heritage-denim-edit__product h4 {
+    font-size: 15px;
+  }
+
+  .heritage-denim-edit__product button {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .heritage-denim-edit__complete {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 75px;
+    padding: 20px;
+  }
+
+  .heritage-denim-edit__pricing strong {
+    font-size: 26px;
+  }
+
+  .heritage-denim-edit__story {
+    margin-top: 75px;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .heritage-denim-edit img,
+  .heritage-denim-edit__link,
+  .heritage-denim-edit__link span,
+  .heritage-denim-edit__product button {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   MATINYANS — THE CITY MUSE EDIT
+   Independent Collection Styling
+========================================== */
+
+.city-muse-edit {
+  background: #F7F3EE;
+  color: #292522;
+  padding: 110px 0;
+  overflow: hidden;
+}
+
+.city-muse-edit,
+.city-muse-edit * {
+  box-sizing: border-box;
+}
+
+.city-muse-edit__container {
+  width: min(1240px, 90%);
+  margin: 0 auto;
+}
+
+/* EDITORIAL INTRODUCTION */
+
+.city-muse-edit__intro {
+  max-width: 790px;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.city-muse-edit__eyebrow {
+  display: block;
+  color: #B10F23;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  line-height: 1.6;
+}
+
+.city-muse-edit h2,
+.city-muse-edit h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.city-muse-edit h2 {
+  margin: 20px 0 16px;
+  font-size: clamp(38px, 5.3vw, 68px);
+}
+
+.city-muse-edit h3 {
+  margin: 18px 0 24px;
+  font-size: clamp(30px, 3.8vw, 49px);
+}
+
+.city-muse-edit h2 em,
+.city-muse-edit h3 em {
+  color: #B10F23;
+  font-weight: 400;
+}
+
+.city-muse-edit__tagline {
+  margin: 16px 0;
+  color: #760C19;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.city-muse-edit__description {
+  color: #51443D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* MAIN EDITORIAL LOOK */
+
+.city-muse-edit__hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(30px, 6vw, 90px);
+  margin-bottom: 115px;
+}
+
+.city-muse-edit__hero-image {
+  overflow: hidden;
+  background: #D8D4D0;
+}
+
+.city-muse-edit__hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.city-muse-edit__hero-image:hover img {
+  transform: scale(1.025);
+}
+
+.city-muse-edit__hero-content {
+  padding: 20px 0;
+}
+
+.city-muse-edit__hero-content p,
+.city-muse-edit__complete-content p,
+.city-muse-edit__story p {
+  color: #51443D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.city-muse-edit__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #171717;
+  color: #171717;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.city-muse-edit__link:hover {
+  color: #B10F23;
+}
+
+.city-muse-edit__link span {
+  font-size: 19px;
+  transition: transform 0.25s ease;
+}
+
+.city-muse-edit__link:hover span {
+  transform: translateX(5px);
+}
+
+/* PRODUCT SECTION */
+
+.city-muse-edit__section-heading {
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.city-muse-edit__section-heading p {
+  color: #76665B;
+  font-size: 14px;
+}
+
+.city-muse-edit__products {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  scroll-margin-top: 100px;
+}
+
+.city-muse-edit__product {
+  min-width: 0;
+  text-align: center;
+}
+
+.city-muse-edit__product-image {
+  overflow: hidden;
+  background: #D8D4D0;
+}
+
+.city-muse-edit__product-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.city-muse-edit__product:hover img {
+  transform: scale(1.035);
+}
+
+.city-muse-edit__product h4 {
+  margin: 19px 0 8px;
+  color: #292522;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.city-muse-edit__price {
+  margin: 0 0 17px;
+  color: #760C19;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.city-muse-edit__product button {
+  width: 100%;
+  padding: 13px 12px;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.city-muse-edit__product button:hover {
+  background: #B10F23;
+  border-color: #B10F23;
+}
+
+.city-muse-edit__product button:focus-visible,
+.city-muse-edit__link:focus-visible {
+  outline: 2px solid #B10F23;
+  outline-offset: 4px;
+}
+
+/* COMPLETE LOOK */
+
+.city-muse-edit__complete {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(30px, 6vw, 90px);
+  margin-top: 125px;
+  padding: 45px;
+  background: #EAE3DD;
+}
+
+.city-muse-edit__complete-image {
+  overflow: hidden;
+}
+
+.city-muse-edit__complete-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.city-muse-edit__complete-image:hover img {
+  transform: scale(1.025);
+}
+
+.city-muse-edit__pricing {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 25px 0 10px;
+}
+
+.city-muse-edit__old-price {
+  color: #76665B;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.city-muse-edit__pricing strong {
+  color: #B10F23;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.city-muse-edit__offer-note {
+  font-size: 12px !important;
+}
+
+/* COLLECTION STORY */
+
+.city-muse-edit__story {
+  max-width: 780px;
+  margin: 115px auto 0;
+  text-align: center;
+}
+
+.city-muse-edit__signature {
+  margin-top: 28px;
+  color: #760C19 !important;
+  font-family: Georgia, serif;
+  font-size: 18px !important;
+  font-style: italic;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .city-muse-edit__products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .city-muse-edit {
+    padding: 85px 0;
+  }
+
+  .city-muse-edit__hero {
+    gap: 35px;
+  }
+
+  .city-muse-edit__complete {
+    gap: 35px;
+    padding: 30px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .city-muse-edit {
+    padding: 65px 0;
+  }
+
+  .city-muse-edit__intro {
+    margin-bottom: 45px;
+  }
+
+  .city-muse-edit__hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 75px;
+  }
+
+  .city-muse-edit__hero-content {
+    padding: 0;
+  }
+
+  .city-muse-edit__section-heading {
+    margin-bottom: 32px;
+  }
+
+  .city-muse-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
+  }
+
+  .city-muse-edit__product h4 {
+    font-size: 15px;
+  }
+
+  .city-muse-edit__product button {
+    padding: 12px 8px;
+    font-size: 10px;
+    letter-spacing: 0.07em;
+  }
+
+  .city-muse-edit__complete {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 75px;
+    padding: 20px;
+  }
+
+  .city-muse-edit__pricing strong {
+    font-size: 26px;
+  }
+
+  .city-muse-edit__story {
+    margin-top: 75px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .city-muse-edit img,
+  .city-muse-edit__link,
+  .city-muse-edit__link span,
+  .city-muse-edit__product button {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   MATINYANS — THE CHOCOLATE & IVORY EDIT
+   Isolated collection styles
+========================================== */
+
+.chocolate-ivory-edit {
+  --cie-chocolate: #43291F;
+  --cie-cocoa: #684536;
+  --cie-cream: #F8F3ED;
+  --cie-ivory: #F4EDE3;
+  --cie-taupe: #D8C8B8;
+  --cie-gold: #C0A16B;
+
+  background: var(--cie-cream);
+  color: var(--cie-chocolate);
+  padding: 100px 24px;
+  overflow: hidden;
+}
+
+.chocolate-ivory-edit,
+.chocolate-ivory-edit * {
+  box-sizing: border-box;
+}
+
+.chocolate-ivory-edit__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* INTRODUCTION */
+
+.chocolate-ivory-edit__intro {
+  max-width: 900px;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.chocolate-ivory-edit__eyebrow {
+  display: block;
+  color: var(--cie-cocoa);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.chocolate-ivory-edit__intro h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -1.5px;
+  color: var(--cie-chocolate);
+  margin: 0 0 22px;
+}
+
+.chocolate-ivory-edit__intro h2 em,
+.chocolate-ivory-edit__section-heading h3 em,
+.chocolate-ivory-edit__hero-caption h3 em,
+.chocolate-ivory-edit__shop-looks-content h3 em,
+.chocolate-ivory-edit__story h3 em {
+  color: var(--cie-cocoa);
+  font-weight: 400;
+}
+
+.chocolate-ivory-edit__tagline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(19px, 2vw, 26px);
+  margin: 0 0 25px;
+}
+
+.chocolate-ivory-edit__description {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #6F5A50;
+}
+
+/* MAIN EDITORIAL */
+
+.chocolate-ivory-edit__hero {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 65px;
+  margin-bottom: 125px;
+}
+
+.chocolate-ivory-edit__hero-image {
+  overflow: hidden;
+  background: #E8DED4;
+}
+
+.chocolate-ivory-edit__hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.7s ease;
+}
+
+.chocolate-ivory-edit__hero-image:hover img {
+  transform: scale(1.025);
+}
+
+.chocolate-ivory-edit__hero-caption h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 3.7vw, 54px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 26px;
+}
+
+.chocolate-ivory-edit__hero-caption p {
+  color: #6F5A50;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 28px;
+}
+
+.chocolate-ivory-edit__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--cie-chocolate);
+  color: var(--cie-chocolate);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+
+.chocolate-ivory-edit__link:hover {
+  color: var(--cie-cocoa);
+  gap: 22px;
+}
+
+.chocolate-ivory-edit__link:focus-visible {
+  outline: 2px solid var(--cie-cocoa);
+  outline-offset: 5px;
+}
+
+/* SECTION HEADINGS */
+
+.chocolate-ivory-edit__section-heading {
+  text-align: center;
+  margin: 0 auto 55px;
+  max-width: 720px;
+}
+
+.chocolate-ivory-edit__section-heading h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+
+.chocolate-ivory-edit__section-heading p {
+  color: #806B5F;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* LOOKBOOK */
+
+.chocolate-ivory-edit__lookbook {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 130px;
+}
+
+.chocolate-ivory-edit__look {
+  min-width: 0;
+  margin: 0;
+}
+
+.chocolate-ivory-edit__look--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.chocolate-ivory-edit__look-image {
+  overflow: hidden;
+  background: #E8DED4;
+}
+
+.chocolate-ivory-edit__look-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.chocolate-ivory-edit__look:hover img {
+  transform: scale(1.035);
+}
+
+.chocolate-ivory-edit__look figcaption {
+  padding-top: 17px;
+}
+
+.chocolate-ivory-edit__look figcaption span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  color: var(--cie-chocolate);
+}
+
+.chocolate-ivory-edit__look figcaption p {
+  margin: 8px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #8B7669;
+}
+
+/* PRODUCT GRID */
+
+.chocolate-ivory-edit__products-heading {
+  margin-bottom: 50px;
+}
+
+.chocolate-ivory-edit__products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 46px 22px;
+  margin-bottom: 135px;
+  scroll-margin-top: 100px;
+}
+
+.chocolate-ivory-edit__product {
+  min-width: 0;
+  text-align: center;
+}
+
+.chocolate-ivory-edit__product-image {
+  overflow: hidden;
+  background: #EAE2D9;
+  margin-bottom: 19px;
+}
+
+.chocolate-ivory-edit__product-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.chocolate-ivory-edit__product:hover img {
+  transform: scale(1.045);
+}
+
+.chocolate-ivory-edit__product h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 9px;
+  color: var(--cie-chocolate);
+}
+
+.chocolate-ivory-edit__price {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  color: var(--cie-cocoa);
+  margin: 0 0 17px;
+}
+
+.chocolate-ivory-edit__product button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 43px;
+  width: 100%;
+  max-width: 220px;
+  padding: 12px 15px;
+  border: 1px solid var(--cie-chocolate);
+  border-radius: 0;
+  background: transparent;
+  color: var(--cie-chocolate);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.chocolate-ivory-edit__product button:hover {
+  background: var(--cie-chocolate);
+  color: #FFFFFF;
+}
+
+.chocolate-ivory-edit__product button:focus-visible {
+  outline: 2px solid var(--cie-gold);
+  outline-offset: 4px;
+}
+
+/* SHOP THE LOOKS */
+
+.chocolate-ivory-edit__shop-looks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 55px;
+  background: #EEE5DC;
+  margin-bottom: 130px;
+}
+
+.chocolate-ivory-edit__shop-looks-image {
+  overflow: hidden;
+}
+
+.chocolate-ivory-edit__shop-looks-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.chocolate-ivory-edit__shop-looks-image:hover img {
+  transform: scale(1.025);
+}
+
+.chocolate-ivory-edit__shop-looks-content h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 4vw, 54px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 26px;
+}
+
+.chocolate-ivory-edit__shop-looks-content p {
+  color: #705B50;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 23px;
+}
+
+/* COLLECTION STORY */
+
+.chocolate-ivory-edit__story {
+  max-width: 790px;
+  margin: 0 auto;
+  padding: 70px 0 15px;
+  text-align: center;
+  border-top: 1px solid var(--cie-taupe);
+}
+
+.chocolate-ivory-edit__story h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 30px;
+}
+
+.chocolate-ivory-edit__story > p {
+  color: #705B50;
+  font-size: 15px;
+  line-height: 2;
+  margin: 0 auto 25px;
+}
+
+.chocolate-ivory-edit__story .chocolate-ivory-edit__signature {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--cie-chocolate);
+  margin-top: 35px;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+  .chocolate-ivory-edit {
+    padding: 80px 22px;
+  }
+
+  .chocolate-ivory-edit__hero {
+    gap: 35px;
+  }
+
+  .chocolate-ivory-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 22px;
+  }
+
+  .chocolate-ivory-edit__shop-looks {
+    gap: 35px;
+    padding: 35px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+
+  .chocolate-ivory-edit {
+    padding: 65px 15px;
+  }
+
+  .chocolate-ivory-edit__intro {
+    margin-bottom: 55px;
+  }
+
+  .chocolate-ivory-edit__eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .chocolate-ivory-edit__intro h2 {
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: -0.7px;
+  }
+
+  .chocolate-ivory-edit__description {
+    font-size: 14px;
+  }
+
+  .chocolate-ivory-edit__hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 85px;
+  }
+
+  .chocolate-ivory-edit__hero-caption {
+    text-align: center;
+  }
+
+  .chocolate-ivory-edit__hero-caption h3 {
+    font-size: 38px;
+  }
+
+  .chocolate-ivory-edit__section-heading {
+    margin-bottom: 35px;
+  }
+
+  .chocolate-ivory-edit__lookbook {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 85px;
+  }
+
+  .chocolate-ivory-edit__look--large {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .chocolate-ivory-edit__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 12px;
+    margin-bottom: 85px;
+  }
+
+  .chocolate-ivory-edit__product h4 {
+    font-size: 14px;
+  }
+
+  .chocolate-ivory-edit__price {
+    font-size: 12px;
+  }
+
+  .chocolate-ivory-edit__product button {
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 10px 6px;
+  }
+
+  .chocolate-ivory-edit__shop-looks {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 22px;
+    margin-bottom: 85px;
+  }
+
+  .chocolate-ivory-edit__shop-looks-content {
+    text-align: center;
+  }
+
+  .chocolate-ivory-edit__story {
+    padding-top: 55px;
+  }
+
+  .chocolate-ivory-edit__story h3 {
+    font-size: 38px;
+  }
+
+  .chocolate-ivory-edit__story > p {
+    font-size: 14px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+  .chocolate-ivory-edit__products {
+    gap: 25px 8px;
+  }
+
+  .chocolate-ivory-edit__product h4 {
+    font-size: 13px;
+  }
+
+  .chocolate-ivory-edit__product button {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .chocolate-ivory-edit *,
+  .chocolate-ivory-edit *::before,
+  .chocolate-ivory-edit *::after {
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
+  }
+}
+
+/* ==========================================
+   MATINYANS — THE EMERALD & BORDEAUX EDIT
+   Isolated Collection Styles
+========================================== */
+
+.emerald-bordeaux-edit {
+  --eb-emerald: #173D32;
+  --eb-forest: #254D3E;
+  --eb-bordeaux: #631D2B;
+  --eb-ivory: #F8F3EC;
+  --eb-champagne: #E7D9C7;
+  --eb-espresso: #292522;
+  --eb-gold: #C0A16B;
+
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: var(--eb-ivory);
+  color: var(--eb-espresso);
+}
+
+.emerald-bordeaux-edit,
+.emerald-bordeaux-edit *,
+.emerald-bordeaux-edit *::before,
+.emerald-bordeaux-edit *::after {
+  box-sizing: border-box;
+}
+
+.emerald-bordeaux-edit img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.emerald-bordeaux-edit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.emerald-bordeaux-edit button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* INTRODUCTION */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__intro {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 110px 24px 90px;
+  text-align: center;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__eyebrow {
+  display: block;
+  color: var(--eb-forest);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__title {
+  margin: 25px 0 18px;
+  color: var(--eb-emerald);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5.3vw, 76px);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -1.5px;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__title em {
+  color: var(--eb-bordeaux);
+  font-weight: 400;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__tagline {
+  margin: 0 0 28px;
+  color: var(--eb-bordeaux);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(19px, 2.2vw, 27px);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__description {
+  max-width: 700px;
+  margin: 0 auto 34px;
+  color: #655A52;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__intro-link,
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--eb-emerald);
+  color: var(--eb-emerald);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__intro-link:hover,
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-link:hover {
+  gap: 22px;
+  color: var(--eb-bordeaux);
+}
+
+/* HERO EDITORIAL */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 65px;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 6% 110px;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__hero-image {
+  overflow: hidden;
+  background: var(--eb-champagne);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__hero-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.7s ease;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__hero-image:hover img {
+  transform: scale(1.025);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__hero-caption h3 {
+  margin: 20px 0;
+  color: var(--eb-emerald);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(33px, 3.5vw, 54px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__hero-caption p {
+  max-width: 350px;
+  color: #655A52;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* SHARED SECTION HEADINGS */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__section-heading {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__section-heading h3 {
+  margin: 15px 0;
+  color: var(--eb-emerald);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 4vw, 55px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__section-heading p {
+  margin: 0;
+  color: #74665D;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* LOOKBOOK */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook {
+  padding: 95px 6% 110px;
+  background: #EDE5DA;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item--featured {
+  grid-row: span 2;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  background: #E8DED2;
+  transition: transform 0.6s ease;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item--featured img {
+  height: 100%;
+  min-height: 730px;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item:hover img {
+  transform: scale(1.025);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item figcaption {
+  padding: 16px 8px;
+  color: var(--eb-emerald);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+}
+
+/* PRODUCT GRID */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__products {
+  padding: 110px 5% 120px;
+  scroll-margin-top: 90px;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 44px 22px;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product {
+  min-width: 0;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product-image {
+  overflow: hidden;
+  background: #EEE8E0;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product:hover img {
+  transform: scale(1.035);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product-info {
+  padding: 20px 2px 0;
+  text-align: center;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__product-info h4 {
+  min-height: 42px;
+  margin: 0 0 9px;
+  color: var(--eb-espresso);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__price {
+  margin: 0 0 16px;
+  color: var(--eb-bordeaux);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 15px;
+  border: 1px solid var(--eb-emerald);
+  border-radius: 0;
+  background: transparent;
+  color: var(--eb-emerald);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  line-height: 1.4;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__add-button:hover {
+  background: var(--eb-emerald);
+  color: #FFFFFF;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__add-button:active {
+  background: var(--eb-bordeaux);
+  border-color: var(--eb-bordeaux);
+}
+
+/* SHOP THE LOOK */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 7%;
+  padding: 90px 8%;
+  background: var(--eb-emerald);
+  color: var(--eb-ivory);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-image {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-image:hover img {
+  transform: scale(1.025);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-content {
+  max-width: 500px;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-content .emerald-bordeaux-edit__eyebrow {
+  color: var(--eb-gold);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-content h3 {
+  margin: 20px 0;
+  color: var(--eb-ivory);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-content p {
+  color: #E4DDD4;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-tagline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px !important;
+  font-style: italic;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-link {
+  margin-top: 20px;
+  border-color: var(--eb-gold);
+  color: var(--eb-ivory);
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-link:hover {
+  color: var(--eb-gold);
+}
+
+/* COLLECTION STORY */
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__story {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 125px 24px 135px;
+  text-align: center;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__story h3 {
+  margin: 20px 0 32px;
+  color: var(--eb-emerald);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(37px, 4.5vw, 60px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__story > p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #655A52;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.emerald-bordeaux-edit .emerald-bordeaux-edit__story .emerald-bordeaux-edit__signature {
+  margin-top: 42px;
+  color: var(--eb-bordeaux);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* ACCESSIBILITY */
+
+.emerald-bordeaux-edit a:focus-visible,
+.emerald-bordeaux-edit button:focus-visible {
+  outline: 2px solid var(--eb-bordeaux);
+  outline-offset: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__hero {
+    gap: 35px;
+    padding: 0 5% 85px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 20px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item--featured {
+    grid-row: auto;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item--featured img,
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__intro {
+    padding: 75px 20px 65px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__title {
+    font-size: clamp(34px, 9vw, 48px);
+    letter-spacing: -0.5px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__description {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 0 20px 75px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__hero-caption {
+    text-align: center;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__hero-caption p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook {
+    padding: 75px 16px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item img,
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-item--featured img {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__products {
+    padding: 75px 14px 85px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__section-heading {
+    margin-bottom: 35px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 12px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__product-info {
+    padding-top: 13px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__product-info h4 {
+    min-height: 56px;
+    font-size: 14px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__price {
+    font-size: 12px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__add-button {
+    min-height: 42px;
+    padding: 10px 5px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+    padding: 65px 22px 75px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__shop-look-content {
+    text-align: center;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__story {
+    padding: 85px 22px 95px;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__story > p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .emerald-bordeaux-edit *,
+  .emerald-bordeaux-edit *::before,
+  .emerald-bordeaux-edit *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+}
+
+/* END MATINYANS — THE EMERALD & BORDEAUX EDIT */
+
+/* MATINYANS — SHOPPING PANEL FIX */
+
+.matinyans-shopping-overlay[hidden],
+.matinyans-shopping-panel[hidden] {
+  display: none !important;
+}
+
+.matinyans-shopping-overlay:not([hidden]) {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(25, 20, 17, 0.55);
+}
+
+.matinyans-shopping-panel:not([hidden]) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  width: min(440px, 100%);
+  max-height: 100dvh;
+  overflow: hidden;
+  background: #F4EDE3;
+  color: #292522;
+  box-shadow: -12px 0 45px rgba(0, 0, 0, 0.15);
+}
+
+.matinyans-shopping-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  border-bottom: 1px solid #D7C2AD;
+}
+
+.matinyans-shopping-panel__header h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+#matinyans-panel-close {
+  border: 0;
+  background: transparent;
+  color: #292522;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.matinyans-shopping-panel__content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.matinyans-product-details img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  background: #EDE5DA;
+}
+
+.matinyans-product-details h3 {
+  margin: 22px 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.matinyans-product-details p {
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+
+.matinyans-product-details label {
+  display: block;
+  margin: 15px 0 8px;
+}
+
+.matinyans-product-details input,
+.matinyans-product-details select {
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #D7C2AD;
+  background: #fff;
+}
+
+.matinyans-product-details .matinyans-shopping-action {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 15px;
+  border: 1px solid #292522;
+  background: #292522;
+  color: #fff;
+  cursor: pointer;
+}
+
+.matinyans-shopping-panel button:focus-visible {
+  outline: 2px solid #9C7966;
+  outline-offset: 3px;
+}
+/* ==========================================
+   EMERALD & BORDEAUX — LOOKBOOK FIX
+   ========================================== */
+
+@media (min-width: 769px) {
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid > :first-child {
+    display: none;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid > :not(:first-child) {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .emerald-bordeaux-edit .emerald-bordeaux-edit__lookbook-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+/* MATINYANS — VISIBLE SHOPPING BAG */
+
+#matinyans-cart-trigger {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9997;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 20px;
+  border: 1px solid #C0A16B;
+  border-radius: 2px;
+
+  background: #292522;
+  color: #F4EDE3;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#matinyans-cart-trigger:hover {
+  background: #43291F;
+}
+
+#matinyans-cart-trigger:focus-visible {
+  outline: 3px solid #C0A16B;
+  outline-offset: 3px;
+}
+
+#matinyans-cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 23px;
+  height: 23px;
+  padding: 0 5px;
+
+  border-radius: 50%;
+  background: #C0A16B;
+  color: #292522;
+
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 600px) {
+  #matinyans-cart-trigger {
+    top: 12px;
+    right: 12px;
+    padding: 10px 13px;
+    font-size: 10px;
+  }
+}
+/* =========================================
+   MATINYANS — LUXURY SHOPPING BAG
+========================================= */
+
+/* Product card */
+.matinyans-cart-item {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 22px 0;
+  border-bottom: 1px solid #e1d5c9;
+}
+
+/* Product image */
+.matinyans-cart-item > img {
+  width: 95px;
+  height: 125px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+/* Product name */
+.matinyans-cart-item h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #292522;
+  margin: 0 0 8px;
+}
+
+/* Product price */
+.matinyans-cart-item p {
+  font-size: 13px;
+  color: #9c7966;
+  margin: 0 0 12px;
+}
+
+/* Quantity controls */
+.matinyans-cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.matinyans-cart-quantity button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d7c2ad;
+  background: transparent;
+  color: #292522;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.matinyans-cart-quantity button:hover {
+  background: #292522;
+  color: #fff;
+}
+
+.matinyans-cart-quantity span {
+  font-size: 14px;
+  color: #292522;
+}
+
+/* Remove */
+.matinyans-cart-remove {
+  background: none;
+  border: none;
+  padding: 4px 0;
+  color: #9c7966;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.matinyans-cart-remove:hover {
+  color: #292522;
+}
+
+/* Subtotal */
+.matinyans-cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 0;
+  border-top: 1px solid #d7c2ad;
+  font-size: 15px;
+  color: #292522;
+}
+
+.matinyans-cart-subtotal strong {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Shipping note */
+.matinyans-shopping-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #9c7966;
+  margin-bottom: 20px;
+}
+
+/* Continue shopping */
+.matinyans-shopping-action {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: transparent;
+  border: 1px solid #292522;
+  color: #292522;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.matinyans-shopping-action:hover {
+  background: #292522;
+  color: #fff;
+}
+
+/* Checkout */
+.matinyans-checkout-button {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin-top: 12px;
+  background: #292522;
+  color: #f4ede3;
+  border: 1px solid #292522;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.matinyans-checkout-button:hover {
+  background: #9c7966;
+  border-color: #9c7966;
+  color: white;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .matinyans-cart-item {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .matinyans-cart-item > img {
+    width: 80px;
+    height: 105px;
+  }
+}
+/* =====================================
+   MATINYANS — LUXURY CHECKOUT FORM
+===================================== */
+
+.matinyans-checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 0 28px;
+}
+
+.matinyans-checkout-intro {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #9c7966;
+  margin: 0 0 18px;
+}
+
+.matinyans-checkout-form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #51443d;
+  margin-top: 10px;
+}
+
+.matinyans-checkout-form input,
+.matinyans-checkout-form textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 14px;
+  border: 1px solid #d7c2ad;
+  border-radius: 0;
+  background: #fffaf5;
+  color: #292522;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.matinyans-checkout-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.matinyans-checkout-form input:focus,
+.matinyans-checkout-form textarea:focus {
+  border-color: #9c7966;
+}
+
+.matinyans-checkout-form input::placeholder,
+.matinyans-checkout-form textarea::placeholder {
+  color: #aa9a8c;
+}
+
+.matinyans-checkout-form .matinyans-cart-subtotal {
+  margin-top: 20px;
+}
+
+.matinyans-checkout-form .matinyans-checkout-button {
+  margin-top: 12px;
+  min-height: 54px;
+}
+
+.matinyans-checkout-form .matinyans-shopping-note {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 8px;
+}
+/* MATINYANS — CHECKOUT ORDER SUMMARY */
+
+.matinyans-order-summary {
+  margin: 24px 0 12px;
+  padding-top: 20px;
+  border-top: 1px solid #d7c2ad;
+}
+
+.matinyans-order-summary > h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #292522;
+  margin-bottom: 20px;
+}
+
+.matinyans-order-summary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e7ddd3;
+}
+
+.matinyans-order-summary-item img {
+  width: 72px;
+  height: 92px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.matinyans-order-summary-item h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #292522;
+  margin: 0 0 8px;
+}
+
+.matinyans-order-summary-item p {
+  font-size: 12px;
+  color: #9c7966;
+  margin: 0 0 8px;
+}
+
+.matinyans-order-summary-item strong {
+  font-size: 13px;
+  color: #292522;
+}
+/* MATINYANS — EDITORIAL CHAPTER REFINEMENT */
+
+.philosophy {
+  background: #f4ede3;
+}
+
+.philosophy h2,
+.philosophy h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.philosophy p {
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0;
+  color: #51443d;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.philosophy em,
+.philosophy i {
+  color: #9c7966;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .philosophy h2,
+  .philosophy h3 {
+    font-size: clamp(34px, 8vw, 52px);
+  }
+
+  .philosophy p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+}
+/* ==========================================
+   MATINYANS — FOUNDER STORY EDITORIAL FIX
+========================================== */
+
+@media (min-width: 1000px) {
+
+  .founder-journey {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    column-gap: clamp(36px, 4vw, 70px);
+    align-items: start;
+    padding: 75px 0;
+  }
+
+  .founder-chapter-heading {
+    min-width: 0;
+  }
+
+  .founder-chapter-heading h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 3.6vw, 54px);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin: 20px 0;
+  }
+
+  .founder-journey-text {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .founder-journey-text p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 22px;
+    color: #51443d;
+  }
+
+  .founder-chapter-heading em {
+    color: #9c7966;
+    font-weight: 400;
+  }
+}
+
+/* Tablet and mobile */
+@media (max-width: 999px) {
+
+  .founder-journey {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 48px 0;
+  }
+
+  .founder-chapter-heading h3 {
+    font-size: clamp(36px, 7vw, 52px);
+  }
+
+  .founder-journey-text {
+    max-width: 680px;
+  }
+}
+/* MATINYANS — ORDER CONFIRMATION */
+
+.matinyans-order-success {
+  padding: 40px 8px;
+  text-align: center;
+  color: #292522;
+}
+
+.matinyans-order-success::before {
+  content: "✓";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 30px;
+  border: 1px solid #c0a16b;
+  border-radius: 50%;
+  color: #9c7966;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.matinyans-order-success h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.matinyans-order-success p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #75665b;
+  margin-bottom: 16px;
+}
+
+.matinyans-order-success .matinyans-shopping-action {
+  margin-top: 32px;
+}
+/* MATINYANS — PHONE NUMBER FIELD */
+
+.matinyans-phone-field {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid #d7c2ad;
+  background: #fffaf5;
+}
+
+.matinyans-phone-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #292522;
+  font-size: 14px;
+  font-weight: 500;
+  border-right: 1px solid #d7c2ad;
+  background: #f4ede3;
+  white-space: nowrap;
+}
+
+.matinyans-checkout-form .matinyans-phone-field input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  border: none;
+  background: transparent;
+}
+
+.matinyans-phone-field:focus-within {
+  border-color: #9c7966;
+}
+/* MATINYANS — SIZE GUIDE */
+
+.matinyans-size-modal[hidden] {
+  display: none !important;
+}
+
+.matinyans-size-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.matinyans-size-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(41, 37, 34, 0.7);
+}
+
+.matinyans-size-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 580px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 45px;
+  background: #f4ede3;
+  color: #292522;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+}
+
+.matinyans-size-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  color: #292522;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.matinyans-size-eyebrow {
+  color: #9c7966;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.matinyans-size-dialog h2 {
+  margin: 20px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 400;
+}
+
+.matinyans-size-description,
+.matinyans-size-note,
+.matinyans-size-disclaimer {
+  color: #75685f;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.matinyans-size-table-wrap {
+  margin: 28px 0;
+  overflow-x: auto;
+}
+
+.matinyans-size-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.matinyans-size-table-wrap th,
+.matinyans-size-table-wrap td {
+  padding: 14px 8px;
+  border-bottom: 1px solid #d7c2ad;
+  font-size: 12px;
+}
+
+.matinyans-size-table-wrap th {
+  color: #9c7966;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.matinyans-size-guide-btn {
+  margin-top: 12px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #9c7966;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .matinyans-size-dialog {
+    padding: 35px 20px;
+  }
+}
+/* MATINYANS — SIZE GUIDE FINAL REFINEMENT */
+
+.matinyans-size-modal {
+  padding: 24px;
+}
+
+.matinyans-size-dialog {
+  position: relative;
+  width: min(100%, 620px);
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+.matinyans-size-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .matinyans-size-modal {
+    padding: 12px;
+  }
+
+  .matinyans-size-dialog {
+    max-height: calc(100dvh - 24px);
+  }
+
+  .matinyans-size-close {
+    top: 12px;
+    right: 12px;
+  }
+}
+.matinyans-size-dialog {
+  scrollbar-width: none;
+}
+
+.matinyans-size-dialog::-webkit-scrollbar {
+  display: none;
+}
+.matinyans-size-modal__dialog {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+/* MATINYANS — Size Guide height fix */
+
+.matinyans-size-modal {
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.matinyans-size-dialog {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
