@@ -1662,37 +1662,37 @@ const orderDetails = cart.map(item => {
 const submitButton = form.querySelector('[type="submit"]');
 if (submitButton) submitButton.disabled = true;
 
-try {
-  const response = await fetch(
-    "https://formsubmit.co/ajax/matinyanmari5@gmail.com",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        _subject: "New MATINYANS Order",
-        name: name,
-        phone: phone,
-        address: address,
-        products: orderDetails,
-        total: `${subtotal} AMD`
-      })
-    }
-  );
 
-  const result = await response.json();
+const orderForm = document.createElement("form");
+orderForm.method = "POST";
+orderForm.action = "https://formsubmit.co/matinyanmari5@gmail.com";
+orderForm.style.display = "none";
 
-  if (!response.ok || result.success === false ||
-      result.success === "false") {
-    throw new Error("Order submission failed");
-  }
-} catch (error) {
-  alert("Order could not be sent. Please try again.");
-  if (submitButton) submitButton.disabled = false;
-  return;
-}
+const fields = {
+  _subject: "New MATINYANS Order",
+  _captcha: "false",
+  name: name,
+  phone: phone,
+  address: address,
+  products: orderDetails,
+  total: `${subtotal} AMD`
+};
+
+Object.entries(fields).forEach(([key, value]) => {
+  const input = document.createElement("input");
+  input.type = "hidden";
+  input.name = key;
+  input.value = value;
+  orderForm.appendChild(input);
+});
+
+document.body.appendChild(orderForm);
+orderForm.submit();
+orderForm.remove();
+
+if (submitButton) submitButton.disabled = false;
+return;
+
 
   cart = [];
 saveCart();
