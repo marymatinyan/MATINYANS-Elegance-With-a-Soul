@@ -1663,35 +1663,39 @@ const submitButton = form.querySelector('[type="submit"]');
 if (submitButton) submitButton.disabled = true;
 
 
-const orderForm = document.createElement("form");
-orderForm.method = "POST";
-orderForm.action = "https://formsubmit.co/matinyanmari5@gmail.com";
-orderForm.style.display = "none";
 
-const fields = {
-  _subject: "New MATINYANS Order",
-  _captcha: "false",
-  name: name,
-  phone: phone,
-  address: address,
-  products: orderDetails,
-  total: `${subtotal} AMD`
-};
+try {
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      access_key: "87357025-9b8f-4cef-a666-6a91031ee8cd",
+      subject: "New MATINYANS Order",
+      from_name: "MATINYANS Website",
+      name: name,
+      phone: phone,
+      address: address,
+      products: orderDetails,
+      total: `${subtotal} AMD`,
+      message: `Customer: ${name}\nPhone: ${phone}\nAddress: ${address}\n\nProducts:\n${orderDetails}\n\nTotal: ${subtotal} AMD`
+    })
+  });
 
-Object.entries(fields).forEach(([key, value]) => {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = key;
-  input.value = value;
-  orderForm.appendChild(input);
-});
+  const result = await response.json();
 
-document.body.appendChild(orderForm);
-orderForm.submit();
-orderForm.remove();
+  if (!response.ok || !result.success) {
+    throw new Error(result.message || "Order submission failed");
+  }
+} catch (error) {
+  console.error("MATINYANS order error:", error);
+  alert("Order could not be sent. Please try again.");
+  if (submitButton) submitButton.disabled = false;
+  return;
+}
 
-if (submitButton) submitButton.disabled = false;
-return;
 
 
   cart = [];
