@@ -1784,8 +1784,8 @@ const orderSummary = cart.map(item => {
     maxlength="8"
     minlength="8"
     pattern="[0-9]{8}"
-    placeholder="77663271"
-    title="Enter 8 digits, for example 77663271"
+   placeholder="XX XXX XXX"
+   title="Enter 8 digits without spaces"
     autocomplete="tel-national"
     required
   >
